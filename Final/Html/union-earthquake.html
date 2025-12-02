@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuakeAware - Full Report</title>
+  <link rel="icon" type="image/png" href="../Pictures/logo.png">
+  <link rel="stylesheet" href="../Css/blog_page_style.css">
+</head>
+
+<!-- MAP POPUP -->
+<div id="mapOverlay">
+  <div id="mapBox">
+    <span id="closeMap">&times;</span>
+    <div id="mapTitle">Location Map</div>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52900.007926764774!2d126.09811515851513!3d9.781579601253087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3303f799567838eb%3A0x7156e972d1804a99!2sUnion%2C%20Dapa%2C%20Surigao%20del%20Norte!5e0!3m2!1sen!2sph!4v1763323696645!5m2!1sen!2sph" 
+      width="100%" height="100%" style="border:0;" allowfullscreen=""
+      loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</div>
+
+<body>
+
+<header>
+  <div style="display:flex; align-items:center;">
+    <span class="menu-btn" id="menuBtn">☰</span>
+    <a href="homepage.html"class="logo-link">
+    <img src="../Pictures/logo.png" alt="Website Logo" class="top">
+</a>
+    <h1>QuakeAware: Full Report</h1>
+  </div>
+  
+  <nav>
+    <ul>
+      <li><a href="homepage.html">Home</a></li>
+      <li><a href="Blog_page.html" class="active">Recent Events</a></li>
+      <li><a href="SafetyTips.html">Safety Tips</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="side-menu" id="sideMenu">
+  <span class="close-btn" id="closeMenu">&times;</span>
+  <div class="side-logo">
+      <img src="../Pictures/logo.png" alt="QuakeAware Mindanao Logo">
+    </div>
+  <ul>
+    <li><a href="homepage.html">Home</a></li>
+    <li><a href="Blog_page.html" class="active">Recent Events</a></li>
+    <li><a href="SafetyTips.html">Safety Tips</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</div>
+
+<div class="container event-layout">
+  <div class="event-photo">
+    <img src="../Pictures/union-mindanao.webp" alt="Davao Earthquake">
+
+    <span id="mapLocationName" style="display:none;">Location of Union, Surigao Del Norte</span>
+
+    <div class="event-basic-details">
+      <h2>Details of the Earthquake</h2>
+      <p><strong>Date:</strong> October 16, 2025</p>
+      <p><strong>Location:</strong> 
+        <span id="openMap" style="color:#1565c0; cursor:pointer;">
+          <a>Union, Surigao Del Norte</a>
+        </span>
+      </p>
+      <p><strong>Magnitude:</strong> 6.1</p>
+      <p><strong>Source:</strong> 
+        <a href="https://watchers.news/2025/10/17/strong-m6-1-earthquake-hits-mindanao-philippines-october-16-2025/" target="_blank">Watchers.news</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="event-info">
+    <h2>Strong M6.1 earthquake hits Mindanao, Philippines</h2>
+    <p>A strong earthquake registered by the USGS as M6.1 struck near Union, Mindanao, Philippines at 23:03 UTC on October 16, 2025 (07:03 LT, October 17). The agency is reporting a depth of 69 km (42.9 miles). EMSC is reporting M6.1 at a depth of 59 km (36.6 miles). There is no tsunami threat from this earthquake.</p>
+    <p>The epicenter was located 0.1 km (0.1 miles) WSW of Union (population 2 368), 57 km (35 miles) ENE of Placer (population 10 443), 67 km (42 miles) E of Surigao (population 87 832), 76 km (47 miles) N of Tandag (population 29 011), and 109 km (68 miles) NE of Butuan (population 309 709), Caraga, Philippines.</p>
+    <p>281 000 people are estimated to have felt moderate shaking, 4 602 000 light, and 4 893 000 weak. There is no tsunami threat from this earthquake.</p>
+    <p>The USGS issued a Green alert for shaking-related fatalities and economic losses. There is a low likelihood of casualties and damage. Overall, the population in this region resides in structures that are a mix of vulnerable and earthquake-resistant construction. The predominant vulnerable building types are miscellaneous and heavy wood frame construction.</p>
+    <p>Recent earthquakes in this area have caused secondary hazards, such as landslides, that might have contributed to losses. Liquefaction triggered by this earthquake is estimated to be limited in extent. The number of people living in areas susceptible to liquefaction is relatively small. Landslides triggered by this event are not expected.</p>
+  </div>
+</div>
+  
+<!-- FOOTER -->
+<footer> 
+  <div class="footer-main"> 
+    <span class="footer-title">Data Sources:</span> 
+    <a href="https://earthquake.phivolcs.dost.gov.ph" target="_blank">PHIVOLCS</a> 
+    <span>|</span> <a href="https://www.buksu.edu.ph" target="_blank">Bukidnon State University</a> 
+    <span>|</span> <a href="https://newsinfo.inquirer.net" target="_blank">Philippine Daily Inquirer</a> 
+  </div> <div class="footer-sub"> 
+    <span>2025 QuakeAware Mindanao</span> 
+  </div> 
+</footer>
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const sideMenu = document.getElementById('sideMenu');
+  const closeMenu = document.getElementById('closeMenu');
+
+  menuBtn.addEventListener('click', () => {
+  sideMenu.classList.add('active');
+  });
+
+  closeMenu.addEventListener('click', () => {
+  sideMenu.classList.remove('active');
+  });
+
+  const mapOverlay = document.getElementById("mapOverlay");
+  const openMap = document.getElementById("openMap");
+  const closeMap = document.getElementById("closeMap");
+  const eventPhoto = document.querySelector(".event-photo img");
+
+  openMap.addEventListener("click", () => {
+    mapOverlay.style.display = "flex";
+  });
+
+  eventPhoto.addEventListener("click", () => {
+    mapOverlay.style.display = "flex";
+  });
+
+  closeMap.addEventListener("click", () => {
+    mapOverlay.style.display = "none";
+  });
+
+  mapOverlay.addEventListener("click", (e) => {
+    if (e.target === mapOverlay) {
+      mapOverlay.style.display = "none";
+    }
+  });
+
+  const mapTitle = document.getElementById("mapTitle");
+  const pageLocationTitle = document.getElementById("mapLocationName").textContent;
+
+  openMap.addEventListener("click", () => {
+  mapTitle.textContent = pageLocationTitle;
+  mapOverlay.style.display = "flex";
+  });
+
+  eventPhoto.addEventListener("click", () => {
+  mapTitle.textContent = pageLocationTitle;
+  mapOverlay.style.display = "flex";
+  });
+</script>
+  
+</body>
+</html>

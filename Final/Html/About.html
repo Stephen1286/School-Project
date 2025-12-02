@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About – QuakeAware Mindanao</title>
+    <link rel="icon" type="image/png" href="../Pictures/logo.png">
+    <link rel="stylesheet" href="../Css/About_style.css">
+</head>
+<body>
+
+     <!-- HEADER -->
+<header>
+  <div style="display:flex; align-items:center;">
+    <span class="menu-btn" id="menuBtn">☰</span>
+   <a href="homepage.html"class="logo-link">
+    <img src="../Pictures/logo.png" alt="Website Logo" class="top">
+</a>
+    <h1>QuakeAware Mindanao</h1>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="homepage.html">Home</a></li>
+      <li><a href="Blog_page.html">Recent Events</a></li>
+      <li><a href="SafetyTips.html">Safety Tips</a></li>
+      <li><a href="About.html" class="active">About</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- SIDE MENU -->
+<div class="side-menu" id="sideMenu"> 
+  <span class="close-btn" id="closeMenu">&times;</span>
+  <div class="side-logo">
+      <img src="../Pictures/logo.png" alt="QuakeAware Mindanao Logo">
+    </div>
+  <ul>
+    <li><a href="homepage.html">Home</a></li>
+    <li><a href="Blog_page.html">Recent Events</a></li>
+    <li><a href="SafetyTips.html">Safety Tips</a></li>
+    <li><a href="About.html" class="active">About</a></li>
+    <li><a href="Contact.html">Contact</a></li>
+  </ul>
+</div>
+
+    <!-- About Section -->
+    <section class="about-container">
+
+        <h2>About QuakeAware Mindanao</h2>
+        <p class="subheader">
+            A platform created to Guide, Educate, and Prepare Mindanaoans against earthquake hazards.
+        </p>
+
+        <div class="about-box">
+
+            <h3>📌 What is QuakeAware Mindanao?</h3>
+            <p>
+                QuakeAware Mindanao is an online information hub dedicated to raising earthquake 
+                awareness across the Mindanao region. Our main purpose is to provide accurate, 
+                updated, and easy-to-understand resources that can help communities stay safe.
+            </p>
+
+            <h3> Why Earthquake Awareness Matters</h3>
+            <p>
+                Mindanao lies near major fault lines, such as the Cotabato Fault System, the Davao
+                River Fault, and segments of the Philippine Fault Zone. Because of this, the region 
+                experiences frequent earthquakes, some of which have caused significant damage in 
+                the past decades.
+            </p>
+            <p>
+                By understanding risks, knowing safety tips, and staying prepared, every Mindanaoan 
+                can help reduce injuries, panic, and property loss during strong earthquakes.
+            </p>
+
+            <h3> History of Major Earthquakes in Mindanao</h3>
+            <ul>
+                <li><strong>2019 Cotabato Earthquake Series</strong> – Multiple strong quakes affected North Cotabato, Davao del Sur, and nearby regions.</li>
+                <li><strong>2012 Davao Oriental Earthquake</strong> – Triggered a tsunami and caused major structural damage.</li>
+                <li><strong>1976 Moro Gulf Earthquake</strong> – One of the deadliest earthquakes in Philippine history, triggering a massive tsunami.</li>
+            </ul>
+
+            <h3> Our Mission</h3>
+            <p>
+                To empower every Mindanao resident with reliable earthquake knowledge, updated 
+                information, and practical preparedness strategies.
+            </p>
+
+            <h3> Our Vision</h3>
+            <p>
+                A disaster-ready and well-informed Mindanao community where people know how to 
+                protect themselves and help others during emergencies.
+            </p>
+
+            <h3> What We Provide</h3>
+            <ul>
+                <li>✔ Latest earthquake updates based on PHIVOLCS data</li>
+                <li>✔ Safety and survival tips for different scenarios</li>
+                <li>✔ Guides on emergency kits, drills, and preparedness</li>
+                <li>✔ Educational content on fault lines and earthquake science</li>
+                <li>✔ Contact information for local emergency services</li>
+            </ul>
+
+            <h3> About the Creators</h3>
+            <p>
+                QuakeAware Mindanao was born from the students firsthand experience during the recent earthquakes in BukSU and nearby areas. Witnessing the fear and confusion pushed us to build a platform that empowers communities with knowledge, awareness, and preparedness. We believe that being informed is the first step to staying safe, calm, and ready.
+You sent
+
+            </p>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+<footer> 
+  <div class="footer-main"> 
+    <span class="footer-title">Data Sources:</span> 
+    <a href="https://earthquake.phivolcs.dost.gov.ph" target="_blank">PHIVOLCS</a> 
+    <span>|</span> <a href="https://www.buksu.edu.ph" target="_blank">Bukidnon State University</a> 
+    <span>|</span> <a href="https://newsinfo.inquirer.net" target="_blank">Philippine Daily Inquirer</a> 
+  </div> <div class="footer-sub"> 
+    <span>2025 QuakeAware Mindanao</span> 
+  </div> 
+</footer>
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const sideMenu = document.getElementById('sideMenu');
+  const closeMenu = document.getElementById('closeMenu');
+
+  menuBtn.addEventListener('click', () => {
+  sideMenu.classList.add('active');
+  });
+
+  closeMenu.addEventListener('click', () => {
+  sideMenu.classList.remove('active');
+  });
+</script>
+
+</body>
+</html>

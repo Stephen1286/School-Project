@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --forest-green: #0C3B2E;
+    --sun-yellow: #ffffff;
+    --white: #FFFFFF;
+    --deep: #0C3B2E; --gold: #ffffff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #f5f5f5;
+  color: #222;
+  line-height: 1.6; 
+    
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #b80000;
+  color: #fff;
+}
+.side-menu a.active {
+  background-color: #b80000;
+  color: #fff;
+  border-radius: 5px;
+}
+    /* ===== HEADER ===== */
+header {
+  background: #2e3b4e;
+  color: #fff;
+  padding: 11px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.top {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.logo-link {
+    display: inline-block;
+}
+
+header h1 {
+  font-size: 1.3rem;
+  color: #fff;
+  letter-spacing: 1px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+nav a:hover,
+nav a.active {
+  background-color: #b80000;
+  color: #fff;
+}
+.side-menu a.active {
+  background-color: #b80000;
+  color: #fff;
+  border-radius: 5px;
+}
+/* ===== MENU BUTTON (MOBILE) ===== */
+.menu-btn {
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #fff;
+  margin-right: 15px;
+}
+@media (max-width: 768px) {
+  nav { display: none; }
+}
+/* ===== SIDE MENU ===== */
+.side-menu {
+  position: fixed;
+  left: -250px;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #2e3b4e;
+  padding-top: 60px;
+  transition: 0.4s;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+}
+.side-menu.active { 
+    left: 0; 
+}
+.side-menu .close-btn {
+  align-self: flex-end;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fff;
+}
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+}
+.side-menu ul li {
+  padding: 15px 30px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.side-menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.side-menu ul li a:hover {
+  background-color: #b80000;
+  border-radius: 5px;
+}
+.side-logo {
+  text-align: center;
+}
+
+.side-logo img {
+  width: auto;
+  height: 100px;
+  margin-left: 0;
+  }
+
+/*-----CONTACT CONTENT-----*/
+.gallery-page h2 {
+    font-size: 3rem;
+    text-align: center;
+    color: rgb(31, 31, 49);
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.gallery-page p.lead {
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--forest-green);
+    margin-bottom: 3rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    padding: 10px 20px;
+    border: 2px solid var(--sun-yellow);
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+.gallery-item:hover {
+    transform: scale(1.1); 
+    transform-origin: center; 
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    z-index: 10; 
+    
+}
+
+.gallery-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    padding-bottom: 4rem;
+}
+
+.gallery-item {
+    width: 90%;
+    max-width: 600px;
+    border-radius: 28px;
+    padding: 2rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* Align items to the top */
+    text-align: left;
+}
+.gallery-item .item-content {
+    flex: 1;
+    padding-right: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 50%;
+}
+.gallery-item .item-visual {
+    position: relative;
+    width: 60%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery-item h3.photo-title {
+    font-size: 2.5rem;
+    font-weight: 900%;
+    margin-bottom: 0;
+    padding-top: 0;
+    line-height: 1.0;
+
+}
+
+.gallery-item img.thumb {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.gallery-item figcaption {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-top: 1rem;}  
+    
+.social-icons {
+  display: flex;
+  flex-direction: column;
+   align-items: center;
+   margin-top:30px;
+   gap: 1.5px;}
+
+.social-icons img {
+   width: 40%; 
+   height: 40%; 
+   margin: 10px;}
+
+footer {
+  background: #2e3b4e;
+  color: #fff;
+  text-align: center;
+  padding: 18px 10px;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+.footer-main,
+.footer-sub {
+  margin: 3px 0;
+}
+
+.footer-title {
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 3px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+    .gallery-page h2 {
+        font-size: 2.5rem;
+    }
+
+    .gallery-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .gallery-item .item-content {
+        padding-right: 0;
+        margin-bottom: 1.5rem;
+        align-items: center;
+    }
+
+    .gallery-item .item-visual {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .gallery-item h3.photo-title {
+        font-size: 2rem;
+
+    }
+
+    .btn-return-home {
+        font-size: 14px;
+        padding: 0.4rem 1rem;
+    }
+
+    .gallery-page p.lead {
+        font-size: 1.1rem;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 520px) {
+    .gallery-page h2 {
+        font-size: 2rem;
+    }
+
+    .gallery-item {
+        width: 95%;
+        padding: 1.2rem;
+    }
+
+    .gallery-item h3.photo-title {
+        font-size: 1.8rem;
+
+    }
+
+    .btn-return-home {
+        font-size: 13px;
+        padding: 0.35rem 0.9rem;
+    }
+
+    .gallery-page p.lead {
+        font-size: 1rem;
+        padding: 6px 12px;
+    }
+}
+ 

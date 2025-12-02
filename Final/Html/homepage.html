@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuakeAware Mindanao - Home</title>
+   <link rel="icon" type="image/png" href="../Pictures/logo.png">
+  <link rel="stylesheet" href="../Css/Homepage_style.css">
+</head>
+<body>
+
+ <section class="bg">
+  <!-- header-->
+  <header>
+    <div style="display:flex; align-items:center;">
+      <span class="menu-btn" id="menuBtn">☰</span>
+      <a href="homepage.html"class="logo-link">
+    <img src="../Pictures/logo.png" alt="Website Logo" class="top">
+</a>
+      <h1>QuakeAware Mindanao</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="homepage.html" class="active">Home</a></li>
+        <li><a href="Blog_page.html">Recent Events</a></li>
+        <li><a href="SafetyTips.html">Safety Tips</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- side menu -->
+  <div class="side-menu" id="sideMenu">
+    <span class="close-btn" id="closeMenu">&times;</span>
+     <div class="side-logo">
+      <img src="../Pictures/logo.png" alt="QuakeAware Mindanao Logo">
+    </div>
+    <ul>
+      <li><a href="homepage.html" class="active">Home</a></li>
+      <li><a href="Blog_page.html">Recent Events</a></li>
+      <li><a href="SafetyTips.html">Safety Tips</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+    <a href="homepage.html" id="out">Log Out</a> 
+  </div>
+
+  <!--main-->
+  <main class="homepage">
+    <div class="hero">
+      <img src="../Pictures/logo.png" alt="QuakeAware Mindanao Logo" class="logo">
+      <h2>QuakeAware Mindanao</h2>
+      <p class="tagline">Latest news, stories, and safety tips from the region of Mindanao</p>
+
+      <div class="sign-log">
+        <a href="login.html" class="login">Log In</a></li>
+        <a href="signup.html" class="signup">Sign Up</a></li>
+      </div>
+    </div>
+  </main>
+
+  <!--footer-->
+  <footer> 
+  <div class="footer-main"> 
+    <span class="footer-title">Data Sources:</span> 
+    <a href="https://earthquake.phivolcs.dost.gov.ph" target="_blank">PHIVOLCS</a> 
+    <span>|</span> <a href="https://www.buksu.edu.ph" target="_blank">Bukidnon State University</a> 
+    <span>|</span> <a href="https://newsinfo.inquirer.net" target="_blank">Philippine Daily Inquirer</a> 
+  </div> <div class="footer-sub"> 
+    <span>2025 QuakeAware Mindanao</span> 
+  </div> 
+</footer>
+  
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const sideMenu = document.getElementById('sideMenu');
+    const closeMenu = document.getElementById('closeMenu');
+
+    menuBtn.addEventListener('click', () => {
+      sideMenu.classList.add('active');
+    });
+
+    closeMenu.addEventListener('click', () => {
+      sideMenu.classList.remove('active');
+    });
+  </script>
+</body>
+</html>

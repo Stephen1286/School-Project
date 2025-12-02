@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+     <link rel="icon" type="image/png" href="../Pictures/logo.png">
+    <link rel="stylesheet" href="../Css/signup-design.css">
+</head>
+<body>
+
+<section class="bg">
+      <!-- header-->
+  <header>
+    <div style="display:flex; align-items:center;">
+      <span class="menu-btn" id="menuBtn">☰</span>
+      <a href="homepage.html"class="logo-link">
+    <img src="../Pictures/logo.png" alt="Website Logo" class="top">
+</a>
+      <h1>QuakeAware Mindanao</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="homepage.html" class="active">Home</a></li>
+        <li><a href="Blog_page.html">Recent Events</a></li>
+        <li><a href="SafetyTips.html">Safety Tips</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- side menu -->
+  <div class="side-menu" id="sideMenu">
+    <span class="close-btn" id="closeMenu">&times;</span>
+     <div class="side-logo">
+      <img src="../Pictures/logo.png" alt="QuakeAware Mindanao Logo">
+    </div>
+    <ul>
+      <li><a href="homepage.html" class="active">Home</a></li>
+      <li><a href="Blog_page.html">Recent Events</a></li>
+      <li><a href="SafetyTips.html">Safety Tips</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <!--main-->
+  <main class="main">
+    <div class="container">
+        <!-- log in -->
+            <form id="loginform">
+                <h1 id="li">Log In</h1>
+                <input type="text" placeholder="Email or Username"><br><br>
+                <input type="password" placeholder="Password"><br><br>
+                <button type="button">Log In</button>
+
+                <div class="switch">
+                    <p>Don't have a account?</p>
+                    <button type="button" onclick="toggleForm('signupform')">Sign Up</button>
+                </div>
+            </form>
+
+        <!-- sign up -->
+            <form id="signupform" class="active">
+                <h1 id="su">Sign Up</h1>
+                <input type="text" placeholder="Firstname"><br><br>
+                <input type="text" placeholder="Lastname"><br><br>
+                <input type="text" placeholder="Username"><br><br>
+                <input type="email" placeholder="Email"><br><br>
+                <input type="text" placeholder="Password"><br><br>
+                <input type="text" placeholder="Confirm Password"><br><br>
+                <button type="button">Sign Up</button>
+
+                <div class="switch">
+                    <p>Already have an account?</p>
+                    <button type="button" onclick="toggleForm('loginform')">Log In</button>
+                </div>
+            </form>
+    </div>
+  </main>
+
+  <!--footer-->
+  <footer> 
+  <div class="footer-main"> 
+    <span class="footer-title">Data Sources:</span> 
+    <a href="https://earthquake.phivolcs.dost.gov.ph" target="_blank">PHIVOLCS</a> 
+    <span>|</span> <a href="https://www.buksu.edu.ph" target="_blank">Bukidnon State University</a> 
+    <span>|</span> <a href="https://newsinfo.inquirer.net" target="_blank">Philippine Daily Inquirer</a> 
+  </div> <div class="footer-sub"> 
+    <span>2025 QuakeAware Mindanao</span> 
+  </div> 
+</footer>
+
+    <script>
+        function toggleForm(formId) {
+            document.getElementById("loginform").classList.remove("active");
+            document.getElementById("signupform").classList.remove("active");
+            document.getElementById(formId).classList.add("active");
+        }
+    </script>
+
+</body>
+</html>

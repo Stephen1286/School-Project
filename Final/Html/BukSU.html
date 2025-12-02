@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuakeAware - Full Report</title>
+  <link rel="icon" type="image/png" href="../Pictures/logo.png">
+  <link rel="stylesheet" href="../Css/blog_page_style.css">
+</head>
+
+<!-- MAP POPUP -->
+<div id="mapOverlay">
+  <div id="mapBox">
+    <span id="closeMap">&times;</span>
+    <div id="mapTitle">Location Map</div>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.4491406580532!2d125.1222752747687!3d8.157421402023187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32ffa986e88ba5d3%3A0x37fbb668eb13f0fd!2sBukidnon%20State%20University!5e0!3m2!1sen!2sph!4v1763580248185!5m2!1sen!2sph" 
+      width="100%" height="100%" style="border:0;" allowfullscreen=""
+      loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</div>
+
+<body>
+
+<header>
+  <div style="display:flex; align-items:center;">
+    <span class="menu-btn" id="menuBtn">☰</span>
+    <a href="homepage.html"class="logo-link">
+    <img src="../Pictures/logo.png" alt="Website Logo" class="top">
+</a>
+    <h1>QuakeAware: Full Report</h1>
+  </div>
+  
+  <nav>
+    <ul>
+      <li><a href="homepage.html">Home</a></li>
+      <li><a href="Blog_page.html" class="active">Recent Events</a></li>
+      <li><a href="SafetyTips.html">Safety Tips</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="side-menu" id="sideMenu">
+  <span class="close-btn" id="closeMenu">&times;</span>
+  <div class="side-logo">
+      <img src="../Pictures/logo.png" alt="QuakeAware Mindanao Logo">
+    </div>
+  <ul>
+    <li><a href="homepage.html">Home</a></li>
+    <li><a href="Blog_page.html" class="active">Recent Events</a></li>
+    <li><a href="SafetyTips.html">Safety Tips</a></li>
+    <li><a href="About.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</div>
+
+<div class="container event-layout">
+  <div class="event-photo">
+    <img src="../Pictures/buksu.png" alt="Bukidnon Earthquake">
+
+    <span id="mapLocationName" style="display:none;">Location of BukSU</span>
+    
+    <!-- BASIC DETAILS UNDER THE PHOTO -->
+    <div class="event-basic-details">
+      <h2>Details</h2>
+      <p><strong>Date:</strong> March 14, 2025</p>
+      <p><strong>Location:</strong>
+        <span id="openMap" style="color:#1565c0; cursor:pointer;">
+          <a>Malaybalay City, Bukidnon</a>
+        </span>
+      </p>
+      <p><strong>Magnitude:</strong> N/A</p>
+      <p><strong>Source:</strong> 
+        <a href="https://buksu.edu.ph/2025/03/14/buksu-alubijid-participates-in-nationwide-simultaneous-earthquake-drill/" target="_blank">
+          BukSU.edu.ph
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <!-- RIGHT COLUMN -->
+  <div class="event-info">
+    <h2>BukSU Alubijid Participates in Nationwide Simultaneous Earthquake Drill</h2>
+    <p>Bukidnon State University-Alubijid Campus participated in the first quarter 2025 Nationwide Simultaneous Earthquake Drill (NSED) on March 13, 2025 in consonance with the government’s initiative to intensify disaster preparedness.</p>
+    <p>The NSED is implemented quarterly to evaluate and enhance the emergency preparedness and response capabilities of communities, institutions, and agencies in the event of an earthquake.</p>
+    <p>“BukSU Alubijid took this proactive measure as an essential step in lowering risks, reducing casualties, and reinforcing safety during actual seismic events,” Dr. Eric Matthew L. Sinerpida</p>
+    <p>Campus Head said. When the alarm sounded, Smart workforce of Alubijid, along with the students were prompted to carefully execute the “duck, cover, and hold” (DCH) method for one minute before moving to their designated evacuation areas. Every classroom is equipped with designated team leaders tasked with guiding their fellow students.</p>
+    <p>BukSU Alert Officers took charge of monitoring campus facilities to ensure no one is left inside the classrooms and offices. Additionally, the team examined the facilities for any signs of structural cracks.</p>
+    <p>“As the campus participates in this quarterly earthquake drill, it serves as an ongoing demonstration of its steadfast commitment to safety and disaster preparedness,” Dr. Sinerpida added.</p>
+    <p>BukSU Alubijid, along with the 15 satellites campuses participated the NSED. (With report fromm Arzel T. Villalon, BukSU Alubijid student writer)</p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer> 
+  <div class="footer-main"> 
+    <span class="footer-title">Data Sources:</span> 
+    <a href="https://earthquake.phivolcs.dost.gov.ph" target="_blank">PHIVOLCS</a> 
+    <span>|</span> <a href="https://www.buksu.edu.ph" target="_blank">Bukidnon State University</a> 
+    <span>|</span> <a href="https://newsinfo.inquirer.net" target="_blank">Philippine Daily Inquirer</a> 
+  </div> <div class="footer-sub"> 
+    <span>2025 QuakeAware Mindanao</span> 
+  </div> 
+</footer>
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const sideMenu = document.getElementById('sideMenu');
+  const closeMenu = document.getElementById('closeMenu');
+
+  menuBtn.addEventListener('click', () => {
+  sideMenu.classList.add('active');
+  });
+
+  closeMenu.addEventListener('click', () => {
+  sideMenu.classList.remove('active');
+  });
+
+  const mapOverlay = document.getElementById("mapOverlay");
+  const openMap = document.getElementById("openMap");
+  const closeMap = document.getElementById("closeMap");
+  const eventPhoto = document.querySelector(".event-photo img");
+
+  openMap.addEventListener("click", () => {
+    mapOverlay.style.display = "flex";
+  });
+
+  eventPhoto.addEventListener("click", () => {
+    mapOverlay.style.display = "flex";
+  });
+
+  closeMap.addEventListener("click", () => {
+    mapOverlay.style.display = "none";
+  });
+
+  mapOverlay.addEventListener("click", (e) => {
+    if (e.target === mapOverlay) {
+      mapOverlay.style.display = "none";
+    }
+  });
+
+  const mapTitle = document.getElementById("mapTitle");
+  const pageLocationTitle = document.getElementById("mapLocationName").textContent;
+
+  openMap.addEventListener("click", () => {
+  mapTitle.textContent = pageLocationTitle;
+  mapOverlay.style.display = "flex";
+});
+
+  eventPhoto.addEventListener("click", () => {
+  mapTitle.textContent = pageLocationTitle;
+  mapOverlay.style.display = "flex";
+});
+</script>
+
+</body>
+</html>
